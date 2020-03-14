@@ -3,7 +3,16 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import Vant,{Lazyload} from 'vant';
+import './assets/icon/iconfont.css';
+Vue.use(Lazyload, {
+  lazyComponent: true
+});
+import 'vant/lib/index.css'
 
+// import './style.scss'
+
+Vue.use(Vant);
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
