@@ -12,6 +12,14 @@ const portfinder = require('portfinder')
 
 const HOST = process.env.HOST
 const PORT = process.env.PORT && Number(process.env.PORT)
+// 增加express
+const express = require('express')
+const app = express()
+//加载项目根目录下模拟的本地json数据文件
+var appData = require('../static/mock/data.json')  //获取本地数据json对象
+var dataRoutes = express.Router()
+// ’/localdata’是自定义的前缀路径
+app.use('/localdata', dataRoutes)
 
 const devWebpackConfig = merge(baseWebpackConfig, {
   module: {
@@ -21,7 +29,17 @@ const devWebpackConfig = merge(baseWebpackConfig, {
   devtool: config.dev.devtool,
 
   // these devServer options should be customized in /config/index.js
+
   devServer: {
+    before(app) {
+      app.get('/localdata/singers', (req, res) => {  //注意这里的路径就是后面axios请求的路径名
+        res.json({   //自定义请求返回的对象属性
+          code: 0,
+          datas: appData
+        })
+      })
+    },
+
     clientLogLevel: 'warning',
     historyApiFallback: {
       rewrites: [

@@ -8,13 +8,14 @@ import Vant,{Lazyload} from 'vant';
 import 'styles/reset.css'
 import 'styles/icon/iconfont.css'
 import 'amfe-flexible'
+import axios from 'axios'
 Vue.use(Lazyload, {
   lazyComponent: true
 });
 import 'vant/lib/index.css'
 
 // import './style.scss'
-
+Vue.prototype.$axios = axios
 Vue.use(Vant);
 Vue.config.productionTip = false
 
