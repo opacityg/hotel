@@ -7,6 +7,7 @@ import Vant,{Lazyload} from 'vant';
 // import './assets/styles/icon/iconfont.css';
 import 'styles/reset.css'
 import 'styles/icon/iconfont.css'
+import 'amfe-flexible'
 Vue.use(Lazyload, {
   lazyComponent: true
 });

@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <van-swipe id="my-swipe" :autoplay="3000" indicator-color="white" width="375" height="200">
+    <van-swipe id="my-swipe" :autoplay="3000" style="width: 100%" indicator-color="white" height="200">
       <van-swipe-item v-for="(image, index) in images" :key="index">
         <img v-lazy="image" style="width: 100%;height: 100%"/>
       </van-swipe-item>
@@ -82,7 +82,7 @@
 <style scoped>
 
   .container{
-    width: 375px;
+    width: 100%;
   }
 
   .van-swipe-item {
