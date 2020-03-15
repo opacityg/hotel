@@ -4,7 +4,9 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import Vant,{Lazyload} from 'vant';
-import './assets/icon/iconfont.css';
+// import './assets/styles/icon/iconfont.css';
+import 'styles/reset.css'
+import 'styles/icon/iconfont.css'
 Vue.use(Lazyload, {
   lazyComponent: true
 });

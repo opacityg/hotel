@@ -80,7 +80,10 @@
 </script>
 
 <style scoped>
-  #my-swipe {
+
+  .container{
+    width: 375px;
+  }
 
   .van-swipe-item {
     color: blue;
@@ -102,20 +105,17 @@
     background: red !important;
   }
 
-  }
   .location-area-wrap {
     position: relative;
-    background: red;
     width: 100%;
-    height: 600px;
   }
 
   .location-area-inner {
     position: absolute;
     width: 345px;
     top: -50px;
-    margin-left: -172.5px;
     left: 50%;
+    margin-left: -172.5px;
     background: red;
     height: 318.5px;
     background: rgba(255, 255, 255, 1);
