@@ -28,8 +28,8 @@
         </div>
 
         <div class="scroll-view-right">
-          <div class="scroll-view-right-item" v-for="(child,index) in subCategory" :key="index">
-            {{child}}
+          <div class="scroll-view-right-item" v-for="(child,index) in lists[activeIndex].subCategory" :key="index">
+            {{child.name}}
           </div>
         </div>
       </div>
@@ -44,27 +44,113 @@
         activeIndex:0,
         lists:[
           {
-            categoryName:'特色'
+            categoryName:'特色',
+            subCategory:[
+              {
+                name:'温泉',
+              },
+              {
+                name: '青年旅舍',
+              },
+              {
+                name:'休闲度假',
+              },
+              {
+                name:'民宿客栈',
+              },
+              {
+                name:'精品酒店',
+              }
+            ]
           },
           {
-            categoryName:'商圈'
+            categoryName:'商圈',
+            subCategory:[
+              {
+                name:'温泉1111111',
+              },
+              {
+                name: '青年旅舍',
+              },
+              {
+                name:'休闲度假',
+              },
+              {
+                name:'民宿客栈',
+              },
+              {
+                name:'精品酒店',
+              }
+            ]
           },
           {
-            categoryName:'机场车站'
+            categoryName:'机场车站',
+            subCategory:[
+              {
+                name:'温泉22222',
+              },
+              {
+                name: '青年旅舍',
+              },
+              {
+                name:'休闲度假',
+              },
+              {
+                name:'民宿客栈',
+              },
+              {
+                name:'精品酒店',
+              }
+            ]
           },
           {
-            categoryName:'景点'
+            categoryName:'景点',
+            subCategory:[
+              {
+                name:'温泉333333333',
+              },
+              {
+                name: '青年旅舍',
+              },
+              {
+                name:'休闲度假',
+              },
+              {
+                name:'民宿客栈',
+              },
+              {
+                name:'精品酒店',
+              }
+            ]
           },
           {
-            categoryName:'行政区'
+            categoryName:'行政区',
+            subCategory:[
+              {
+                name:'温泉444444',
+              },
+              {
+                name: '青年旅舍',
+              },
+              {
+                name:'休闲度假',
+              },
+              {
+                name:'民宿客栈',
+              },
+              {
+                name:'精品酒店',
+              }
+            ]
           },
         ],
-        subCategory:['温泉','青年旅舍','休闲度假','民宿客栈','精品酒店']
+
       }
     },
     methods:{
-      handleSelectedType(){
-        console.log('sssssssss')
+      handleSelectedType(i){
+        // console.log('sssssssss')
+        this.activeIndex = i;
       }
     }
   }
