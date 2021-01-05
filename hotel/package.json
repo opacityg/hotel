@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "amfe-flexible": "^2.2.1",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "lib-flexible": "^0.3.2",
     "npm": "^6.14.2",
     "px2rem-loader": "^0.1.9",
